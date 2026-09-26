@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="post-list">
+    {% if posts %}
+        {% for p in posts %}
+        <article class="post-preview">
+            <h2><a href="{{ url_for('post', slug=p.slug) }}">{{ p.title }}</a></h2>
+            {% if p.date %}<time class="post-date">{{ p.date }}</time>{% endif %}
+            {% if p.summary %}<p class="post-summary">{{ p.summary }}</p>{% endif %}
+        </article>
+        {% endfor %}
+    {% else %}
+        <p>Nenhum post publicado ainda. Adicione arquivos .md em content/posts/</p>
+    {% endif %}
+</section>
+{% endblock %}

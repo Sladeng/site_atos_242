@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }} — Empreendedorismo & Santidade{% endblock %}
+
+{% block content %}
+<article class="post-full">
+    <h1>{{ title }}</h1>
+    {% if date %}<time class="post-date">{{ date }}</time>{% endif %}
+    <div class="post-content">
+        {{ content | safe }}
+    </div>
+    <p><a href="/">&larr; Voltar para todos os posts</a></p>
+</article>
+{% endblock %}

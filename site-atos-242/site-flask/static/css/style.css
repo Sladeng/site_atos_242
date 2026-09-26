@@ -1,0 +1,166 @@
+/* ---------------------------------------------------
+   Empreendedorismo & Santidade
+   Paleta: tinta (#1C1B19), pergaminho (#FAF6EE),
+   ouro velho (#8B6F3F) como único acento.
+   Serif de leitura + sans utilitária, sem enfeites.
+--------------------------------------------------- */
+
+:root {
+    --ink: #1c1b19;
+    --parchment: #faf6ee;
+    --parchment-dim: #f0eadb;
+    --gold: #8b6f3f;
+    --line: #e3dcc8;
+    --text-muted: #6b6558;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Header */
+.site-header {
+    border-bottom: 1px solid var(--line);
+    padding: 48px 0 28px;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--ink);
+    letter-spacing: 0.01em;
+}
+
+.site-subtitle {
+    margin: 6px 0 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+}
+
+/* Post list */
+.post-list {
+    padding: 40px 0;
+}
+
+.post-preview {
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.post-preview:first-child { padding-top: 0; }
+
+.post-preview h2 {
+    margin: 0 0 6px;
+    font-size: 1.4rem;
+}
+
+.post-preview h2 a {
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.post-preview h2 a:hover,
+.post-preview h2 a:focus-visible {
+    color: var(--gold);
+}
+
+.post-date {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+}
+
+.post-summary {
+    margin: 10px 0 0;
+    color: var(--text-muted);
+}
+
+/* Full post */
+.post-full {
+    padding: 40px 0 60px;
+}
+
+.post-full h1 {
+    font-size: 2rem;
+    margin: 0 0 8px;
+    line-height: 1.25;
+}
+
+.post-content {
+    margin-top: 28px;
+    font-size: 1.08rem;
+}
+
+.post-content h2 { font-size: 1.35rem; margin-top: 2em; }
+.post-content h3 { font-size: 1.1rem; margin-top: 1.6em; }
+
+.post-content a { color: var(--gold); }
+
+.post-content blockquote {
+    margin: 1.6em 0;
+    padding: 4px 0 4px 20px;
+    border-left: 3px solid var(--gold);
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.post-content code {
+    background: var(--parchment-dim);
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+.post-full p a { text-decoration-color: var(--gold); }
+
+/* 404 */
+.not-found {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.not-found h1 {
+    font-size: 4rem;
+    margin: 0;
+    color: var(--gold);
+}
+
+/* Footer */
+.site-footer {
+    border-top: 1px solid var(--line);
+    padding: 28px 0 48px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+/* Focus visibility */
+a:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .site-header { padding: 36px 0 22px; }
+    .post-full h1 { font-size: 1.6rem; }
+}
