@@ -75,5 +75,9 @@ def not_found(e):
 
 
 if __name__ == "__main__":
-    # debug=True facilita o desenvolvimento local (recarrega sozinho)
-    app.run(debug=False, port=5000)
+    # Em produção (Railway), a porta vem da variável de ambiente PORT,
+    # e o host precisa ser 0.0.0.0 pra aceitar conexões externas.
+    # debug=True só localmente — nunca em produção.
+    port = int(os.environ.get("PORT", 5000))
+    debug = os.environ.get("FLASK_DEBUG", "true").lower() == "true"
+    app.run(host="0.0.0.0", port=port, debug=debug)

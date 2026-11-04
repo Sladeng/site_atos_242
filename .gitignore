@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.git-backup/
+*.zip
+# rascunhos soltos na raiz (o site so usa content/posts)
+/*.md
+!/README.md
