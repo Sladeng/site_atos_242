@@ -12,7 +12,6 @@ Depois acesse http://localhost:5000
 
 import os
 from pathlib import Path
-
 import frontmatter
 import markdown
 from flask import Flask, abort, render_template
